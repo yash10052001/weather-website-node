@@ -8,6 +8,7 @@ const forecast= require('./utlis/forcecast')
 
 //define paths for express config 
 const app=express()//routing of http request 
+const port=process.env.PORT || 3000
 const publicDirectory=path.join(__dirname, '../public')
 const viewsPath=path.join(__dirname, '../templates/views');
 const partialPath=path.join(__dirname,'../templates/partials');
@@ -120,8 +121,8 @@ app.get('*',(req,res)=>{
 })
 //why the 404 error comes to the last 
 
-app.listen(3000,()=>{
-    console.log('The port has started bitch');
+app.listen(port,()=>{
+    console.log('Server has started on port '+port);
 })
  
 //this is an asynrcnous process 
