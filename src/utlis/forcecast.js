@@ -10,7 +10,7 @@ const forecast=(longitude,latitude,callback)=>{
        }else if(response.body.error){
           callback("Unable to track down that loction nigga",undefined)
       } else {
-           callback(undefined,"It is currently "+ response.body.current.temperature+"outside. There is" +response.body.current.feelslike+"  chance of rain ");
+           callback(undefined,"It is currently "+ response.body.current.temperature+"outside. There is" +response.body.current.feelslike+"  chance of rain. Have a good day");
         
       }
     
